@@ -1,68 +1,54 @@
-:root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
+@import "tailwindcss";
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+@layer base {
+  @font-face {
+    font-family: "CircularWeb";
+    src: url("/fonts/circularweb-book.woff2") format("woff2");
+  }
 
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
+  @font-face {
+    font-family: "General";
+    src: url("/fonts/general.woff2") format("woff2");
+  }
 
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
+  @font-face {
+    font-family: "RobertRegular";
+    src: url("/fonts/robert-regular.woff2") format("woff2");
+  }
+
+  @font-face {
+    font-family: "RobertMedium";
+    src: url("/fonts/robert-medium.woff2") format("woff2");
+  }
+
+  @font-face {
+    font-family: "Zentry";
+    src: url("/fonts/zentry-regular.woff2") format("woff2");
+  }
 }
 
 body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+  font-family: "General Sans", sans-serif;
+  width: 100dvw;
+  background-color: #dfdff0;
+  overflow-x: hidden;
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
-}
+@theme {
+  --font-circular: "CircularWeb", sans-serif;
+  --font-general: "General", sans-serif;
+  --font-robert-regular: "RobertRegular", sans-serif;
+  --font-robert-medium: "RobertMedium", sans-serif;
+  --font-zentry: "Zentry", sans-serif;
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
-}
+  --color-blue-50: #dfdff0;
+  --color-blue-75: #dfdff2;
+  --color-blue-100: #f0f2fa;
+  --color-blue-200: #010101;
+  --color-blue-300: #4fb7dd;
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+  --color-violet-300: #5724ff;
+
+  --color-yellow-100: #8e983f;
+  --color-yellow-300: #edff66;
 }
